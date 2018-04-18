@@ -7,7 +7,9 @@ namespace ProblemA_TheSeat
    {
       public Sequence(string input)
       {
-         if (input.Length < 2 || input.Length > 1000) throw new ArgumentOutOfRangeException(nameof(input), input.Length, "Input string length must be between 2 and 1000.");
+         if (input.Length < 2 || input.Length > 1000)
+            throw new ArgumentOutOfRangeException(nameof(input), input.Length,
+               "Input string length must be between 2 and 1000.");
          Sequences = input.ToCharArray();
       }
 

@@ -10,10 +10,7 @@ namespace ProblemA_TheSeat
          var seq = new Sequence(line);
          var pf = new AdjustmentCounter(seq);
 
-         foreach (var result in pf.GetResults())
-         {
-            Console.WriteLine(result);
-         }
+         foreach (var result in pf.GetResults()) Console.WriteLine(result);
       }
    }
 }

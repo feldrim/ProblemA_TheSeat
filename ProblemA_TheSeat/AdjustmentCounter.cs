@@ -36,6 +36,4 @@ namespace ProblemA_TheSeat
          if (current != after) _results[policyNumber]++;
       }
    }
-
-
 }
