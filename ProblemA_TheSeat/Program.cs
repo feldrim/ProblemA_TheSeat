@@ -1,15 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProblemA_TheSeat
 {
-   class Program
+   public static class Program
    {
-      static void Main(string[] args)
+      public static void Main(string[] args)
       {
+         var line = Console.ReadLine();
+         var seq = new Sequence(line);
+         var pf = new PolicyFactory(seq);
+
+         foreach (var result in pf.GetResults())
+         {
+            Console.WriteLine(result);
+         }
       }
    }
 }
