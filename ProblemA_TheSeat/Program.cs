@@ -8,7 +8,7 @@ namespace ProblemA_TheSeat
       {
          var line = Console.ReadLine();
          var seq = new Sequence(line);
-         var pf = new PolicyFactory(seq);
+         var pf = new AdjustmentCounter(seq);
 
          foreach (var result in pf.GetResults())
          {
