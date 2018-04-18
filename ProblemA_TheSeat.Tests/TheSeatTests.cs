@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System.Linq;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace ProblemA_TheSeat.Tests
 {
@@ -10,11 +11,10 @@ namespace ProblemA_TheSeat.Tests
       {
          const string input = "UUUDDUDU";
          var sequence = new Sequence(input);
-
-         var policyFactory = new PolicyFactory(sequence);
+         var policyFactory = new AdjustmentCounter(sequence);
          var results = policyFactory.GetResults();
 
-         Assert.AreEqual(new[] {6, 7, 4}, results);
+         Assert.IsTrue(results.SequenceEqual(new[] {6, 7, 4}));
       }
    }
 }
